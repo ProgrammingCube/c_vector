@@ -24,7 +24,7 @@ Reserve `size` number of elements in vector `foo`
 - `vector_clear( foo )`
 Set size of vector `foo` to zero
 - `vector_empty( foo )`
-Set size of vector `foo` to zero  (?)
+Returns `bool` check on if vector `foo` is empty
 - `vector_resize( foo, size )`
 Resize vector `foo` to arbitrary `size`
 - `vector_erase( foo, index )`
