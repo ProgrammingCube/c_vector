@@ -10,6 +10,10 @@ target_include_directories(vector PUBLIC
 
 set_target_properties(vector PROPERTIES C_VISIBILITY_PRESET hidden)
 
+set_target_properties(vector PROPERTIES 
+    PUBLIC_HEADER "include/vector.h" 
+)
+
 include(GNUInstallDirs)
 install(TARGETS vector
     EXPORT CVectorTargets
