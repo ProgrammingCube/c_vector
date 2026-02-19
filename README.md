@@ -2,6 +2,7 @@
 This library is most likely not the best, but it is something
 The goal is to mimic the std::vector functionality and have "overloading" to make your life easier.
 
+![Build Status](http://192.168.1.122:3001/api/v1/repos/ProgrammingCube/c_vector/actions/workflows/build.yml/badge)
 
 ## Functions
 
