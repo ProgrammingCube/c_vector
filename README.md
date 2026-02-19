@@ -3,7 +3,7 @@ This library is most likely not the best, but it is something
 The goal is to mimic the std::vector functionality and have "overloading" to make your life easier.
 
 <!-- ![Build Status](http://192.168.1.122:3001/api/v1/repos/ProgrammingCube/c_vector/actions/workflows/build.yml/badge) -->
-![Linux Build](http://192.168.1.122:3001/api/v1/repos/ProgrammingCube/c_vector/actions/workflows/build.yml/badge?job=build-linux)
+![Linux Build](http://192.168.1.122:3001/api/v1/repos/programmingcube/c_vector.git/actions/workflows/build.yml/badge?job=build-linux)
 
 ## Functions
 
