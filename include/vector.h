@@ -40,7 +40,7 @@
         size_t _n = (count); \
         void* _tmp = _vec_prepare_insert((v), (pos), _n, sizeof(*(v))); \
         if (_tmp) { \
-            (v) = (typeof(v))_tmp; \
+            (v) = (__typeof__(v))_tmp; \
             for(size_t _i = 0; _i < _n; ++_i) { (v)[(pos) + _i] = (val); } \
             _vec_set_size((v), vector_size(v) + _n); \
         } \
@@ -50,7 +50,7 @@
         size_t _n = (end) - (start); \
         void* _tmp = _vec_prepare_insert((v), (pos), _n, sizeof(*(v))); \
         if (_tmp) { \
-            (v) = (typeof(v))_tmp; \
+            (v) = (__typeof__(v))_tmp; \
             memcpy(&(v)[pos], &(src)[start], _n * sizeof(*(v))); \
             _vec_set_size((v), vector_size(v) + _n); \
         } \
@@ -89,7 +89,7 @@
 #define vector_size(v) ((v) ? _vec_get_header(v)->size : 0)
 #define vector_capacity(v) ((v) ? _vec_get_header(v)->capacity : 0)
 
-#define vector_at(v, index) ((typeof(v))_vec_at((v), (index)))
+#define vector_at(v, index) ((__typeof__(v))_vec_at((v), (index)))
 #define vector_pop_back(v) \
     do { \
         if (vector_size(v) > 0) { \
@@ -102,7 +102,7 @@
     do { \
         if ((n) > vector_capacity(v)) { \
             void* _tmp = _vec_realloc_heap((v), (n), sizeof(*(v))); \
-            if (_tmp) (v) = (typeof(v))_tmp; \
+            if (_tmp) (v) = (__typeof__(v))_tmp; \
         } \
     } while(0)
 #define vector_clear(v) (_vec_set_size((v), 0))
@@ -140,7 +140,7 @@
         if ((v) && vector_capacity(v) > vector_size(v)) { \
             /* We realloc to exactly the current size */ \
             void* _tmp = _vec_realloc_heap((v), vector_size(v), sizeof(*(v))); \
-            if (_tmp) (v) = (typeof(v))_tmp; \
+            if (_tmp) (v) = (__typeof__(v))_tmp; \
         } \
     } while(0)
 
